@@ -1,0 +1,28 @@
+.weather-icon{
+    width: 100px;
+}
+body {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b6/Mount_Everest_as_seen_from_Drukair2_PLW_edit_Cropped.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-attachment: fixed;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+#main{
+    background-image: url('https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg');
+    width: 50%;
+    background-size: cover;
+    height: 50vh;
+    margin: auto;
+    background-position: bottom ;
+    background-repeat: no-repeat;
+    padding: 40px;
+    border-radius: 40px;
+}
