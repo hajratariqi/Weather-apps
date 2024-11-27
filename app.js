@@ -20,7 +20,7 @@ getData()
         <p>Weather: ${res.weather[0].description}</p>
         <p>Humidity: ${res.main.humidity}%</p>
         <p>Wind Speed: ${res.wind.speed} m/s</p>
-        <img class='weather-icon' src='https://cdn-icons-png.flaticon.com/512/252/252035.png' alt="Weather icon"/>
+        <img class='weather-icon' src='https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather02-512.png' alt="Weather icon"/>
       </div>
     `
 })
