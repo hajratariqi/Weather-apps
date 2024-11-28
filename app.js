@@ -1,11 +1,15 @@
+let country = document.getElementById('country').value = 'pakistan'
+
+
 const searchCountry = () =>{
+country = document.getElementById('country').value
 let mainDiv = document.getElementById('main')
 let currentDate = new Date()
 let days = [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 let day = days[currentDate.getDay()]
 let time = currentDate.getHours()+':'+currentDate.getMinutes()
 let date = day + ' ' + time 
-let country = document.getElementById('country').value
+
 
 const getData = () => {
 return new Promise((resolve,reject)=>{
@@ -14,10 +18,9 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=c7a75b
 
 .then(res => res.json())
 .then(res => resolve(res))
-.catch(err => console.log(err))
+.catch(err => alert(err))
 })
 }
-
 
 getData()
 .then((res)=>{
@@ -40,4 +43,12 @@ getData()
       </div>
     `
 })
+.catch(err => alert(err))
+}
+
+if(country){
+    searchCountry()
+    console.log('country found');
+}else{
+    console.log('country not found');
 }

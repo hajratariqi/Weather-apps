@@ -70,3 +70,23 @@ body {
     font-size: 16px;
     margin-top: 20px;
 }
+.searchCountry-box input{
+    border: none;
+    background-color: aliceblue;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+.searchCountry-box input::placeholder{
+    color: black;
+}
+.searchCountry-box button{
+    border: none;
+    background-color: aliceblue;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+.searchCountry-box {
+    margin-bottom: 50px;
+}
