@@ -22,6 +22,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=c7a75b
 })
 }
 
+// if()
 getData()
 .then((res)=>{
     console.log(res);
