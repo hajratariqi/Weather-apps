@@ -27,9 +27,11 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=c7a75b
 
 .then(res => res.json())
 .then(res => resolve(res))
-.catch(err => alert(err))
+.catch(err => reject(err))
 })
 }
+mainDiv.innerHTML = "<p>Loading...</p>";
+
 
 getData()
 .then((res)=>{
@@ -52,7 +54,7 @@ getData()
       </div>
     `
 })
-.catch(err => alert(err))
+.catch(err =>  mainDiv.innerHTML = "<p>Failed to fetch data. Please try again.</p>")
 }
 
 if(country){
