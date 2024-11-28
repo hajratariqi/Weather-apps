@@ -7,9 +7,18 @@ let mainDiv = document.getElementById('main')
 let currentDate = new Date()
 let days = [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 let day = days[currentDate.getDay()]
-let time = currentDate.getHours()+':'+currentDate.getMinutes()
-let date = day + ' ' + time 
+let hour = currentDate.getHours()
 
+if(hour > 12){
+  hour = hour - 12
+  console.log('yes', hour);
+  
+}else{
+  null
+}
+let mints = +currentDate.getMinutes()
+let time = hour+':' + mints
+let date = day + ' ' + time 
 
 const getData = () => {
 return new Promise((resolve,reject)=>{
@@ -22,7 +31,6 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=c7a75b
 })
 }
 
-// if()
 getData()
 .then((res)=>{
     console.log(res);
